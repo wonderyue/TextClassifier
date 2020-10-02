@@ -8,68 +8,6 @@ from Parser import get_vocabulary, bag_of_words, bernoulli
 
 
 def main():
-    # c = multinomial_nb_classifier()
-    # for i in range(1, 4):
-    #     vocabulary = get_vocabulary(f"dataset{i}/train")
-    #     train_data, classes = bag_of_words(f"dataset{i}/train", vocabulary)
-    #     c.train(train_data, classes)
-    #     test_data, classes = bag_of_words(f"dataset{i}/test", vocabulary)
-    #     print(c.test(test_data, classes))
-
-    # c = nb_classifier()
-    # for i in range(1, 4):
-    #     vocabulary = get_vocabulary(f"dataset{i}/train")
-    #     train_data, classes = bernoulli(f"dataset{i}/train", vocabulary)
-    #     c.train(train_data, classes)
-    #     test_data, classes = bernoulli(f"dataset{i}/test", vocabulary)
-    #     print(c.test(test_data, classes))
-
-    # np.warnings.filterwarnings("ignore", "overflow")
-    # lr = LRClassifer()
-    # for i in range(1, 4):
-    #     vocabulary = get_vocabulary(f"dataset{i}/train")
-    #     train_data, classes = bag_of_words(f"dataset{i}/train", vocabulary)
-    #     print("lambda:", lr.train(train_data, classes))
-    #     test_data, classes = bag_of_words(f"dataset{i}/test", vocabulary)
-    #     print("accuracy:", lr.test(test_data, classes))
-
-    # lr.train(
-    #     np.array(
-    #         [
-    #             [2, 1],
-    #             [2, 2],
-    #             [5, 4],
-    #             [4, 5],
-    #             [2, 3],
-    #             [3, 2],
-    #             [6, 5],
-    #             [4, 1],
-    #             [6, 3],
-    #             [7, 4],
-    #         ]
-    #     ),
-    #     np.array([0, 0, 1, 1, 0, 0, 1, 0, 1, 1]),
-    # )
-    # print(
-    #     lr.test(
-    #         np.array(
-    #             [
-    #                 [2, 1.2],
-    #                 [2, 2.2],
-    #                 [5, 4.2],
-    #                 [4, 5.2],
-    #                 [2, 3.2],
-    #                 [3, 2.2],
-    #                 [6, 5.5],
-    #                 [4, 1.5],
-    #                 [6, 3.5],
-    #                 [7, 4.5],
-    #             ]
-    #         ),
-    #         np.array([0, 0, 1, 1, 0, 0, 1, 0, 1, 1]),
-    #     )
-    # )
-
     parser = argparse.ArgumentParser(description="Instructions:")
     parser.add_argument(
         "-nb", dest="nb", help="Discrete Naive Bayes Classifier", action="store_true"
