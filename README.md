@@ -10,8 +10,8 @@ optional arguments:
   -mnb                  Multinomial Naive Bayes Classifier
   -lr                   Logistic Regression Classifier
   -sgd                  Stochastic Gradient Descent Classifier
-  -train 								train_data_path
-  -test									test_data_path
+  -train                train_data_path
+  -test                 test_data_path
 ```
 
 For example, run NBClassifier and SGDClassifier for dataset1/train and dataset1/test
