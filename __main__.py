@@ -72,9 +72,10 @@ def parse(args):
         sgd = sgd_classifier()
         print("Stochastic Gradient Descent Classifier:")
         print("bag_of_words:")
-        sgd.train(bow_train_data, bow_train_classes)
+        print(sgd.train(bow_train_data, bow_train_classes))
         print_result(sgd.test(bow_test_data, bow_test_classes))
         print("bernoulli:")
+        print(sgd.train(bnl_train_data, bnl_train_classes))
         print_result(sgd.test(bnl_test_data, bnl_test_classes))
 
 

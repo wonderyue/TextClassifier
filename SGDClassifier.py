@@ -21,9 +21,7 @@ class sgd_classifier:
         gridSearch = GridSearchCV(self.clf, param_grid=self.param_grid,)
         gridSearch.fit(train_data, classes)
         self.best_estimator = gridSearch.best_estimator_
-        print(
-            f"max_iter:{self.best_estimator.max_iter}, alpha:{self.best_estimator.alpha}, penalty:{self.best_estimator.penalty}"
-        )
+        return f"max_iter:{self.best_estimator.max_iter}, alpha:{self.best_estimator.alpha}, penalty:{self.best_estimator.penalty}"
 
     def test(self, test_data, classes):
         predict = self.best_estimator.predict(test_data)

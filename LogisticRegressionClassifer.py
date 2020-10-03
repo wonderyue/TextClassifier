@@ -26,7 +26,7 @@ class lr_classifer:
             train_data, classes, test_size=0.3
         )
         # find the best lambda
-        max_accuracy = 0
+        max_precision = 0
         max_lambda = None
         for l in lambda_arr:
             w = np.ones(train_data.shape[1])
@@ -39,8 +39,8 @@ class lr_classifer:
                     break
                 old_w = w
             accuracy, precision, recall, f1 = self.__test(x_valid, y_valid, w)
-            if accuracy > max_accuracy:
-                max_accuracy = accuracy
+            if precision > max_precision:
+                max_precision = precision
                 max_lambda = l
         # train with best lambda and full train data
         self._w = np.ones(train_data.shape[1])
